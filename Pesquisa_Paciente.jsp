@@ -102,14 +102,14 @@ hr {
 <body>
 	<!-- Corpo -->
 	<div id="corpo">
-		<!-- Formulário -->
+		<!-- FormulÃ¡rio -->
 		<div id="formulario">
 			<form action="upDatePacienteServlet" method="POST">
 				<c:set var="isPacienteCheio" value="${not empty paciente}" />
 
 				<div class="esquerda" id="">
-					<label for="pront"><b>Prontuário:</b></label><br> <input
-						type="text" name="pront" size="10" placeholder="Prontuário" required
+					<label for="pront"><b>ProntuÃ¡rio:</b></label><br> <input
+						type="text" name="pront" size="10" placeholder="ProntuÃ¡rio" required
 						value='<c:if test="${isPacienteCheio}">${paciente.prontuario}</c:if>'>
 				</div>
 				<div class="data direita" id="">
@@ -138,8 +138,8 @@ hr {
 						value='<c:if test="${isPacienteCheio}">${paciente.nomePai}</c:if>' /><br />
 				</div>
 				<div class="direita" id="">
-					<label for="filiacao_mae"><b>Mãe:</b></label><br> <input
-						type="text" name="mae" size="25" placeholder="Nome da Mãe"
+					<label for="filiacao_mae"><b>MÃ£e:</b></label><br> <input
+						type="text" name="mae" size="25" placeholder="Nome da MÃ£e"
 						value='<c:if test="${isPacienteCheio}">${paciente.nomeMae}</c:if>'>
 				</div>
 				<div class="esquerda" id="">
@@ -150,7 +150,7 @@ hr {
 				</div>
 				<div class="direita" id="">
 					<label for="CNS"><b>CNS:</b></label><br> <input type="text"
-						name="cns" size="25" placeholder="Cartão SUS"
+						name="cns" size="25" placeholder="CartÃ£o SUS"
 						value='<c:if test="${isPacienteCheio}">${paciente.cns}</c:if>'>
 				</div>
 				<div class="telefone esquerda" id="">
@@ -169,6 +169,10 @@ hr {
 						<input type="reset" value="Limpar Campos"
 							onclick="location.href='http://localhost:8080/Hospital/Pesquisa_Paciente.jsp' "
 							class="botao">
+						<input type="image" name="Logout" class="botao"
+							src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKO51jvAArjaIlWeKJ4l-S7l8EUimDehFEzraa6sQB44RAKeRf4w"
+							width="30px" height="30px"
+							style="float: right; margin-right: -500px; margin-top: -400px" />
 					</c:when>
 					<c:otherwise>
 						<input type="submit" name="botao" value="Buscar" class="botao" />
@@ -176,11 +180,15 @@ hr {
 						<input type="button" value="Voltar"
 							onClick="location.href='http://localhost:8080/Hospital/Cadastro_Paciente.jsp' "
 							class="botao">
+						<input type="image" name="Logout" class="botao"
+							src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKO51jvAArjaIlWeKJ4l-S7l8EUimDehFEzraa6sQB44RAKeRf4w"
+							width="30px" height="30px"
+							style="float: right; margin-right: -500px; margin-top: -400px" />
 					</c:otherwise>
 				</c:choose>
 			</form>
 		</div>
-		<!-- /Formulário -->
+		<!-- /FormulÃ¡rio -->
 	</div>
 	<!-- /Corpo -->
 </body>
