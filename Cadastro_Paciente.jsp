@@ -159,7 +159,11 @@ hr {
 				<input type="reset" value="Limpar Campos" class="botao"> <input
 					type="button" value="Pesquisar"
 					onclick="location.href='http://localhost:8080/Hospital/Pesquisa_Paciente.jsp' "
-					class="botao">
+					class="botao"> <input type="image" name="Logout"
+					class="botao"
+					src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKO51jvAArjaIlWeKJ4l-S7l8EUimDehFEzraa6sQB44RAKeRf4w"
+					width="30px" height="30px"
+					style="float: right; margin-right: -500px; margin-top: -400px" />
 			</form>
 		</div>
 		<!-- /Formulário -->
