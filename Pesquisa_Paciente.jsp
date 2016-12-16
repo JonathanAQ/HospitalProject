@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8" />
-<title>HFJN - CADSATRO DE PACIENTE</title>
+<title>HFJN - PESQUISA DE PACIENTE</title>
 <link rel="shortcut icon"
 	href="http://2.bp.blogspot.com/-KUY2L3m-ECA/Va5mA0AiMsI/AAAAAAAAFaE/pY5CBrpGWcc/s1600/Medicina2.jpg">
 <style>
