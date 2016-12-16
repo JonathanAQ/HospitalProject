@@ -166,6 +166,13 @@ hr {
 					style="float: right; margin-right: -500px; margin-top: -400px" />
 			</form>
 		</div>
+		<form action="logoutServlet" method="post">
+		<input type="image" name="Logout"
+			class="botao"
+			src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKO51jvAArjaIlWeKJ4l-S7l8EUimDehFEzraa6sQB44RAKeRf4w"
+			width="30px" height="30px"
+			style="float: right; margin-right: -500px; margin-top: -400px" />
+		</form>
 		<!-- /Formulário -->
 	</div>
 	<!-- /Corpo -->
