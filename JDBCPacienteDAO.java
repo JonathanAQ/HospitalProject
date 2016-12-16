@@ -18,13 +18,7 @@ public class JDBCPacienteDAO implements pacienteDAO {
 		this.conn = conn;
 	}
 
-	/*public boolean isErro() {
-		return erro;
-	}
-
-	public void setErro(boolean erro) {
-		this.erro = erro;
-	}*/
+	
 
 	@Override
 	public void inserirPaciente(Paciente paciente) {
@@ -52,7 +46,7 @@ public class JDBCPacienteDAO implements pacienteDAO {
 			stmt.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
-			//erro = true;
+			
 		}
 
 	}
@@ -90,7 +84,40 @@ public class JDBCPacienteDAO implements pacienteDAO {
 	@Override
 	public void alterar(Paciente paciente) {
 		// TODO Auto-generated method stub
-		
+		String sql = "UPDATE paciente SET " +
+				"nome_PCT =\"" 
+				+ paciente.getNomePaciente() + "\"," +
+				"nome_PAI =\"" 
+				+ paciente.getNomePai() + "\", " +
+				"nome_MAE =\"" 
+				+ paciente.getNomeMae() + "\", " +
+				"dado_pct_DNASC =\""
+				+ paciente.getDtNascimento() + "\", " +
+				"doc_RG =\""
+				+ paciente.getRg() + "\", " +
+				"doc_CPF =\""
+				+ paciente.getCpf() + "\", " +
+				"doc_CNS =\""
+				+ paciente.getCns() + "\", " +
+				"atend_TIPO =\""
+				+ paciente.getTipoAtendimento() + "\", " +
+				"tel_FIXO =\""
+				+ paciente.getTelefoneFixo() + "\", " +
+				"tel_CEL =\""
+				+ paciente.getTelefoneCel() + "\" "
+				+ "WHERE pront_iD = \"" +  paciente.getProntuario() + "\"";
+		System.out.println(sql);
+		PreparedStatement stmt;
+
+		try {
+			stmt = (PreparedStatement) conn.prepareStatement(sql);
+			stmt.execute();
+			stmt.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+			//erro = true;
+		}
+
 	}
 
 	@Override
