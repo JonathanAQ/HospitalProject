@@ -169,10 +169,6 @@ hr {
 						<input type="reset" value="Limpar Campos"
 							onclick="location.href='http://localhost:8080/Hospital/Pesquisa_Paciente.jsp' "
 							class="botao">
-						<input type="image" name="Logout" class="botao"
-							src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKO51jvAArjaIlWeKJ4l-S7l8EUimDehFEzraa6sQB44RAKeRf4w"
-							width="30px" height="30px"
-							style="float: right; margin-right: -500px; margin-top: -400px" />
 					</c:when>
 					<c:otherwise>
 						<input type="submit" name="botao" value="Buscar" class="botao" />
@@ -180,14 +176,14 @@ hr {
 						<input type="button" value="Voltar"
 							onClick="location.href='http://localhost:8080/Hospital/Cadastro_Paciente.jsp' "
 							class="botao">
-						<input type="image" name="Logout" class="botao"
-							src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKO51jvAArjaIlWeKJ4l-S7l8EUimDehFEzraa6sQB44RAKeRf4w"
-							width="30px" height="30px"
-							style="float: right; margin-right: -500px; margin-top: -400px" />
 					</c:otherwise>
 				</c:choose>
 			</form>
 		</div>
+		<input type="image" name="Logout" class="botao"
+			src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKO51jvAArjaIlWeKJ4l-S7l8EUimDehFEzraa6sQB44RAKeRf4w"
+			width="30px" height="30px"
+			style="float: right; margin-right: -500px; margin-top: -400px" />
 		<!-- /Formulário -->
 	</div>
 	<!-- /Corpo -->
