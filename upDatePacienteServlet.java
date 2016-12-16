@@ -68,6 +68,34 @@ public class upDatePacienteServlet extends HttpServlet {
 
 	private void alterar(HttpServletRequest request, HttpServletResponse response) {
 		// TODO Auto-generated method stub
+		System.out.println("alterando");
+		ConnectionFactory cf = new ConnectionFactory();
+		Connection conn = cf.getConnection();
+		JDBCPacienteDAO dao =new JDBCPacienteDAO(conn); 
+		Paciente paciente = new Paciente ();
+		int pront = Integer.parseInt(request.getParameter("pront"));
+
+		paciente.setProntuario(pront);
+		paciente.setNomePaciente(request.getParameter("nome"));
+		paciente.setNomePai(request.getParameter("pai"));
+		paciente.setNomeMae(request.getParameter("mae"));
+		paciente.setDtNascimento(request.getParameter("data"));
+		paciente.setRg(request.getParameter("rge"));
+		paciente.setCpf(request.getParameter("cpf"));
+		paciente.setCns(request.getParameter("cns"));
+		paciente.setTipoAtendimento(request.getParameter("Tipo de Consulta"));
+		paciente.setTelefoneFixo(request.getParameter("tel"));
+		paciente.setTelefoneCel(request.getParameter("celular"));
+
+		dao.alterar(paciente);
+		List<Paciente> pacientes = dao.listarPaciente();
+		request.setAttribute("pacientes", pacientes);
+
+
+		cf.close();
+
+		RequestDispatcher requestDispatcher = request.getRequestDispatcher("Listar_Pacientes.jsp");
+		requestDispatcher.forward(request, response);
 		
 	}
 
